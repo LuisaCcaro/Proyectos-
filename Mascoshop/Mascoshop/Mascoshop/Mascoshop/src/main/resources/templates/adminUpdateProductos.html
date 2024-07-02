@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/productosAdmin.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1><img src="../img/Mascoshoop.png" width="300px" alt=""></h1>
+        </div>
+        <ul>
+            <li><a href="/administrador"><i class="fa-solid fa-house"></i>&nbsp; <span>Inicio</span> </a></li>
+            <li><a href=""><i class="fa-solid fa-address-card"></i>&nbsp; <span>Perfil</span> </a></li>
+            <li><a href="/productos-Administrador"><i class="fa-solid fa-bone"></i>&nbsp; <span>Productos</span></a></li>
+            <li><a href=""><i class="fa-brands fa-paypal"></i>&nbsp;<span>Pagos</span> </a></li>
+            <li><a href=""><i class="fa-solid fa-gear"></i>&nbsp;<span>Settings</span> </a></li>
+            <li><a href="/home"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;<span>Cerrar sesión</span> </a></li> 
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Actualizar Productos</h2>
+                    </div>
+                    <div class="containers">
+                        <!-- <form id="update-product-form" enctype="multipart/form-data">
+                            <div class="categoria form-groups">
+                                <label>Id Producto</label>
+                                <input type="number" id="categoryIdInput" name="categoria" required>
+                            </div>
+                            <div class="categoria form-groups">
+                                <label>Categoria</label>
+                                <input type="number" id="categoria" name="categoria" required>
+                            </div>
+                            
+                            <div class="animal form-groups">
+                                <label>Animal</label>
+                                <input type="number" id="animal" name="animal" min="0" required>
+                            </div>
+                            
+                            <div class="nombre form-groups">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="marca form-groups">
+                                <label for="marca">Marca:</label>
+                                <input type="number" class="box-input" id="marcaId" name="marcaId" required>
+                            </div>
+                            
+                            <div class="descripcion form-groups">
+                                <label for="descripcion">Descripción:</label>
+                                <textarea id="descripcion" name="descripcion" required></textarea>
+                            </div>
+                            
+                            <div class="imagen form-groups">
+                                <label for="imagen">Imagen:</label>
+                                <input type="file" id="imagen" name="imagen" accept="image/*">
+                            </div> 
+                            
+                            <div class="precio form-groups">
+                                <label for="precio">Precio:</label>
+                                <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+                            </div>
+                            
+                            <div class="cantidad form-groups">
+                                <label for="cantidadDisponible">Cantidad Disponible:</label>
+                                <input type="number" id="cantidadDisponible" name="cantidadDisponible" required>
+                            </div>
+                            
+                            <div class="botonAgg form-groups">
+                                <button type="button" id="update-product" data-id="{}">Actualizar</button>
+                            </div>
+                            <p id="message"></p>
+                        </form>                         -->
+                        <form id="updateForm" enctype="multipart/form-data">
+                            <label for="id-producto-update">ID del Producto a actualizar:</label>
+                            <input type="number" id="id-producto-update" name="id-producto-update" required>
+                            <button type="button" id="search-product">Buscar Producto</button>
+                            <br><br>
+                        
+                            <label for="update-nombre">Nombre:</label>
+                            <input type="text" id="update-nombre" name="nombre" required>
+                            <br><br>
+                        
+                            <div class="categoria">
+                                <p>Categoria</p>
+                                <input type="number" class="box-input" id="update-categoria" name="categoriaProducto.idCategoria" required>
+                            </div>
+                        
+                            <div class="animal">
+                                <p>Animal</p>
+                                <input type="number" class="box-input" id="update-animal" name="animal.idAnimal" required>
+                            </div>
+                            <br><br>
+                        
+                            <div class="marca">
+                                <p>Marca</p>
+                                <input type="number" class="box-input" id="update-marcaId" name="marca.idMarca" required>
+                            </div>
+                        
+                            <label for="update-descripcion">Descripción:</label>
+                            <textarea id="update-descripcion" name="descripcion" required></textarea>
+                            <br><br>
+                        
+                            <label for="update-imagen">Imagen:</label>
+                            <input type="file" id="update-imagen" name="imagen" accept="image/*">
+                            <br><br>
+                        
+                            <label for="update-precio">Precio:</label>
+                            <input type="number" id="update-precio" name="precio" step="0.01" required>
+                            <br><br>
+                        
+                            <label for="update-cantidadDisponible">Cantidad Disponible:</label>
+                            <input type="number" id="update-cantidadDisponible" name="cantidadDisponible" required>
+                            <br><br>
+                        
+                            <button type="button" id="update-product">Actualizar Producto</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="new-students">
+                    <div class="title">
+                        <h2>Nuevos Productos</h2> 
+                    </div>
+                    <table id="productos-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Stock</th>
+                                <th>Animal</th>
+                                <th>Marca</th>
+                                <th>Categoría</th>
+                                <th>Imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/supaB.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/aggProduct.js"></script>
+    <script src="js/consultaAdmin.js"></script>
+    <script src="js/productosDOM.js"></script>
+    <script src="js/product.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

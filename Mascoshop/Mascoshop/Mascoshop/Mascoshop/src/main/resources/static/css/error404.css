@@ -1,0 +1,22 @@
+body{
+    overflow: hidden;
+}
+.error404{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error404 img{
+    filter: drop-shadow(5px 5px 15px black);
+}
+.error404 .texto404 h1{
+    color: #000;
+    font-size: 100px;
+}
+.error404 .texto404 p{
+    font-size: 50px;
+}
+.error404 .texto404 span{
+    font-size: 200px;
+}

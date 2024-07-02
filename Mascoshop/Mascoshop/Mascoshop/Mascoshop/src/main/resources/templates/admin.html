@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1><img src="../img/Mascoshoop.png" width="300px" alt=""></h1>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i>&nbsp; <span>Inicio</span> </a></li>
+            <li><a href="#"><i class="fa-solid fa-address-card"></i>&nbsp; <span>Perfil</span> </a></li>
+            <li><a href="/productos-Administrador"><i class="fa-solid fa-bone"></i>&nbsp;<span>Productos</span> </a></li>
+            <li><a href="#"><i class="fa-brands fa-paypal"></i>&nbsp;<span>Pagos</span> </a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp;<span>Settings</span> </a></li>
+            <li><a href="/home" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>&nbsp; <span>Cerrar Sesion</span></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="user">
+                    <h2 id="welcome-message"></h2>
+                </div>
+                
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h2><span id="clientesCount">0</span></h2>
+                        <h3>Clientes</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h2><span id="productosCount">0</span></h2>
+                        <h3>Productos</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>0</h1>
+                        <h3>Total</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Registros</h2>
+                    </div>
+                    <table id="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo</th>
+                                <th>Usuario</th>
+                                <th>Dirección</th>
+                                <th>Teléfono</th>
+                                <th>Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/supaB.js"></script>
+    <script src="../js/contadorAdmin.js"></script>
+    <script src="../js/consultaAdmin.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+User: Mascoshop
+Contraseña: mascoshopmasco
+
+host: aws-0-us-west-1.pooler.supabase.com
+database name: postgres
+port: 5432
+User: postgres.xihzyoxkydsfutbygmfx

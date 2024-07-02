@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Gatoyperro-removebg-preview.png" type="image/x-icon">
+    <title>Log In ~ Mascoshop</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <header>Log In</header>
+                <form action="/login" method="POST" id="loginForm">
+                    <div class="field input-field">
+                        <input type="text" id="usuario" placeholder="Usuario" class="input" name="nombreUsuario" required>
+                    </div>
+
+                    <div class="field input-field">
+                        <input type="password" id="contraseña" placeholder="Password" class="password" name="contrasena" required>
+                        <i class="bx bx-hide eye-icon"></i>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">¿ Olvidaste tu contraseña ?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit"> Log In </button>
+                    </div>
+                </form>
+                <div class="form-link">
+                    <span>Aun no tienes cuenta? <a href="#" class="link signup-link">Crear cuenta</a></span>
+                </div>
+        </div>
+        <div class="line"></div>
+
+        <div class="media-options">
+            <a href="#" onclick="signIn()" class="field google">
+                <img src="../img/IconGoogle.png" alt="" class="google-img">
+                <span>Iniciar sesion con Gmail</span>
+            </a>
+        </div>
+    </div>
+        
+
+    <!-- registro -->
+    <div class="form signup">
+        <div class="form-content">
+            <header>Registro</header>
+             <div class="form-outer">
+                <form action="/register" method="POST" id="form-register">
+                   <div class="page slide-page">
+                      <div class="field">
+                         <div class="label">
+                            Nombre
+                         </div>
+                         <input type="text" name="nombre">
+                      </div>
+                      <div class="field">
+                         <div class="label">
+                            Apellido
+                         </div>
+                         <input type="text" name="apellido">
+                      </div>
+                      <div class="field">
+                        <div class="label">
+                           Direccion
+                        </div>
+                        <input type="text" name="direccion">
+                     </div>
+                      <div class="field">
+                         <button class="firstNext next">Siguiente</button>
+                      </div>
+                   </div>
+                   <div class="page">
+                      <div class="field">
+                         <div class="label">
+                            Correo
+                         </div>
+                         <input type="text" name="correo">
+                      </div>
+                      <div class="field">
+                         <div class="label">
+                            Telefono
+                         </div>
+                         <input type="tel" name="telefono">
+                      </div>
+                      <div class="field btns">
+                         <button class="prev-1 prev">Anterior</button>
+                         <button class="next-1 next">Siguiente</button>
+                      </div>
+                   </div>
+                   <div class="page">
+                      <div class="field">
+                         <div class="label">
+                            Usuario
+                         </div>
+                         <input type="text" name="nombreUsuario">
+                      </div>
+                      <div class="field">
+                         <div class="label">
+                            Contraseña
+                         </div>
+                         <input type="password" name="contrasena">
+                      </div>
+                      <input type="checkbox" id="termsCondiciones">
+                    <label for="termsCondiciones">He leido y acepto los <a href="" class="abrir_modal">Terminos y condiciones</a></label>
+                    <br>
+                    <input type="checkbox" id="privacidad">
+                    <label for="privacidad">Acepto las <a href="" class="abrir_modal_privacidad">Política de Privacidad</a></label>
+                      <div class="field btns">
+                         <button class="prev-2 prev">Anterior</button>
+                         <button class="submit" onclick="registrarUsuario()">Enviar</button>
+                      </div>
+                   </div>
+                </form>
+             </div>
+            <div class="form-link2">
+                    <span>Tienes una cuenta? <a href="#" class="link login-link">Inicio sesion</a></span>
+                </div> 
+
+                <!-- Terminos y condiciones -->
+
+                <section class="modal">
+                  <div class="container_modal">
+                      <h1>Terminos y condiciones</h1>
+                      <p>
+                          <h2>1. Introducción</h2>
+                  <p>Bienvenido a Mascoshop. Al utilizar nuestro sitio web, aceptas cumplir y estar sujeto a los siguientes Términos y Condiciones. Por favor, léelos cuidadosamente antes de usar nuestro sitio.</p>
+                  <h2>2. Uso del Sitio Web</h2>
+                  <p>2.1 Solo puedes utilizar el sitio web para propósitos legales y de acuerdo con estos Términos y Condiciones.</p>
+                  <p>2.2 No puedes usar nuestro sitio para ningún propósito ilegal o no autorizado.</p>
+                  <h2>3. Productos y Servicios</h2>
+                  <p>3.1 Mascoshop ofrece productos de comida y accesorios para perros y gatos.</p>
+                  <p>3.2 Todos los productos están sujetos a disponibilidad y podemos limitar la cantidad de productos que se pueden comprar por persona o por pedido.</p>
+                  <h2>4. Pedidos y Pagos</h2>
+                  <p>4.1 Al realizar un pedido, aceptas pagar el precio total del producto, incluidos los impuestos y los costos de envío aplicables.</p>
+                  <p>4.2 Aceptamos varios métodos de pago seguros y confiables. Todos los pagos deben ser realizados en la moneda especificada en el sitio.</p>
+                  <h2>5. Envíos y Entregas</h2>
+                  <p>5.1 Ofrecemos envíos a nivel nacional.</p>
+                  <p>5.2 Los tiempos de entrega pueden variar según la ubicación y la disponibilidad del producto. No somos responsables de los retrasos causados por factores fuera de nuestro control.</p>
+                  <h2>6. Devoluciones y Reembolsos</h2>
+                  <p>6.1 Aceptamos devoluciones de productos no utilizados y en su empaque original dentro de los 30 días posteriores a la compra.</p>
+                  <p>6.2 Para solicitar una devolución o reembolso, por favor, contacta a nuestro servicio de atención al cliente con tu número de pedido y detalles del producto.</p>
+                  <h2>7. Propiedad Intelectual</h2>
+                  <p>7.1 Todo el contenido del sitio web, incluidos textos, gráficos, logotipos, imágenes y software, es propiedad de Mascoshop o sus proveedores de contenido y está protegido por leyes de derechos de autor.</p>
+                  <p>7.2 No puedes reproducir, distribuir o utilizar de ninguna manera el contenido del sitio sin nuestro permiso previo por escrito.</p>
+                  <h2>8. Privacidad y Seguridad</h2>
+                  <p>8.1 Nos comprometemos a proteger tu privacidad y seguridad. Por favor, revisa nuestra Política de Privacidad para más detalles sobre cómo manejamos tu información personal.</p>
+                  <p>8.2 Utilizamos medidas de seguridad avanzadas para proteger tu información durante las transacciones en línea.</p>
+                  <h2>9. Modificaciones de los Términos y Condiciones</h2>
+                  <p>9.1 Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Cualquier cambio será efectivo inmediatamente después de su publicación en el sitio.</p>
+                  <p>9.2 Es tu responsabilidad revisar estos Términos y Condiciones periódicamente para estar al tanto de cualquier cambio.</p>
+                  <h2>10. Contacto</h2>
+                  <p>Si tienes alguna pregunta sobre estos Términos y Condiciones, por favor, contacta a nuestro servicio de atención al cliente a través de nuestro sitio web o envía un correo electrónico a <a href="mailto:tu_email@mascoshop.com" class="correo">Mascoshop@gmail.com</a>.</p>
+                      <a href="#" class="modal_cierre">Cerrar</a>
+                  </div>
+              </section>
+                <!--  -->
+
+                <!-- Privacidad -->
+                <section class="modal_privacidad">
+                  <div class="container_modal_privacidad">
+                     <h1>Politicas de privacidad</h1>
+                     <h2>1. Introducción</h2>
+        <p>En Mascoshop, nos comprometemos a proteger la privacidad de nuestros clientes y visitantes. Esta Política de Privacidad describe cómo recopilamos, utilizamos y protegemos tu información personal cuando usas nuestro sitio web.</p>
+        
+        <h2>2. Información que Recopilamos</h2>
+        <p><strong>2.1 Información Personal:</strong> Cuando realizas una compra o te registras en nuestro sitio, podemos recopilar información como tu nombre, dirección de correo electrónico, dirección de envío, número de teléfono y detalles de pago.</p>
+        <p><strong>2.2 Información No Personal:</strong> Podemos recopilar información no personal, como datos demográficos y estadísticas de uso del sitio, que nos ayudan a mejorar nuestra oferta de productos y servicios.</p>
+        
+        <h2>3. Uso de la Información</h2>
+        <p><strong>3.1</strong> Utilizamos la información personal para procesar tus pedidos, gestionar tu cuenta y proporcionarte una experiencia de compra personalizada.</p>
+        <p><strong>3.2</strong> También podemos usar tu información para enviarte comunicaciones promocionales y actualizaciones sobre nuestros productos, siempre y cuando hayas dado tu consentimiento para recibir dichas comunicaciones.</p>
+        
+        <h2>4. Compartir la Información</h2>
+        <p><strong>4.1</strong> No vendemos ni alquilamos tu información personal a terceros.</p>
+        <p><strong>4.2</strong> Podemos compartir tu información con proveedores de servicios de confianza que nos ayudan a operar nuestro sitio web, procesar pagos y enviar pedidos. Estos proveedores están obligados a proteger tu información y usarla solo para los fines para los que fue compartida.</p>
+        
+        <h2>5. Seguridad de la Información</h2>
+        <p><strong>5.1</strong> Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra el acceso no autorizado, la divulgación, la alteración o la destrucción.</p>
+        <p><strong>5.2</strong> Utilizamos cifrado SSL para proteger los datos sensibles transmitidos en nuestro sitio web.</p>
+        
+        <h2>6. Cookies y Tecnologías Similares</h2>
+        <p><strong>6.1</strong> Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestro sitio, analizar el tráfico del sitio y personalizar el contenido.</p>
+        <p><strong>6.2</strong> Puedes configurar tu navegador para rechazar las cookies, pero esto puede afectar tu capacidad para utilizar ciertas funciones de nuestro sitio.</p>
+        
+        <h2>7. Derechos del Usuario</h2>
+        <p><strong>7.1</strong> Tienes derecho a acceder, corregir o eliminar tu información personal en cualquier momento. También puedes solicitar que restrinjamos el procesamiento de tu información personal.</p>
+        <p><strong>7.2</strong> Para ejercer tus derechos, por favor, contacta a nuestro servicio de atención al cliente a través de nuestro sitio web o envía un correo electrónico a <a href="mailto:tu_email@mascoshop.com">Mascoshop@gmail.com</a>.</p>
+        
+        <h2>8. Cambios en la Política de Privacidad</h2>
+        <p><strong>8.1</strong> Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será efectivo inmediatamente después de su publicación en el sitio.</p>
+        <p><strong>8.2</strong> Te notificaremos sobre cualquier cambio importante en nuestra Política de Privacidad.</p>
+        
+        <h2>9. Contacto</h2>
+        <p>Si tienes alguna pregunta sobre esta Política de Privacidad, por favor, contacta a nuestro servicio de atención al cliente a través de nuestro sitio web o envía un correo electrónico a <a href="mailto:tu_email@mascoshop.com">Mascoshop@gmail.com</a>.</p>
+                      <a href="#" class="modal_cierre_privacidad">Cerrar</a>
+                  </div>
+              </section>
+                <!--  -->
+                
+    <!-- </div> -->
+    <div class="line"></div>
+
+    <div class="media-options">
+        <a href="#" onclick="signIn()" class="field google">
+            <img src="../img/IconGoogle.png" class="google-img">
+            <span>Registrarse con Gmail</span>
+        </a>
+    </div>
+</div>
+
+</section>
+<section class="imagen">
+    <img src="../img/perrito.jpg">
+</section>
+    <!-- Javascript -->
+    <script src="../js/login.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/terms.js"></script>
+    <script src="../js/supaB.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/consultaAdmin.js"></script>
+</body>
+</html>
